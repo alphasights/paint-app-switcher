@@ -13,6 +13,8 @@
 
 **How to Use**
 
-`bower install paint-app-switcher --save`
+In your `Bower.json` include
+`"paint-app-switcher": "git://github.com/alphasights/paint-app-switcher.git#0.0.3"`
 
+And then after loading Paint use
 `@include 'bower-components/paint-app-switcher/stylesheeets/components/app-switcher'`
