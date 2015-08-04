@@ -72,7 +72,7 @@ $app-switcher: map-merge-settings($app-switcher-default-settings, $app-switcher)
         text-align: center;
 
         > span,
-        a > span {
+        > a {
           @extend %app-switcher-label;            
         }
       }
