@@ -1,0 +1,25 @@
+{
+  "name": "paint-app-switcher",
+  "version": "0.0.1",
+  "homepage": "https://github.com/alphasights/paint-app-switcher",
+  "authors": [
+    "Andrei Popa <andrei.deioo@gmail.com>"
+  ],
+  "description": "AppSwitcher Component styles and assets extracted from Paint",
+  "main": "paint-app-switcher.scss",
+  "keywords": [
+    "Paint",
+    "AppSwitcher"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "paint": "~0.8.9"
+  }
+}
