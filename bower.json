@@ -1,6 +1,6 @@
 {
   "name": "paint-app-switcher",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "homepage": "https://github.com/alphasights/paint-app-switcher",
   "authors": [
     "Andrei Popa <andrei.deioo@gmail.com>"
@@ -21,6 +21,6 @@
     "tests"
   ],
   "devDependencies": {
-    "paint": "~0.8.9"
+    "paint": "~0.8.10"
   }
 }
