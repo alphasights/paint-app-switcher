@@ -4,7 +4,7 @@
 
 **Package Dependencies**
 
-* Paint 0.8.9
+* Paint 0.8.10
 
 **Component Dependencies**
 
@@ -18,3 +18,12 @@ In your `Bower.json` include
 
 And then after loading Paint use
 `@include 'bower-components/paint-app-switcher/stylesheeets/components/app-switcher'`
+
+Reset the assets path with
+
+```scss
+$app-switcher: (
+  assets-path: 'paint-app-switcher/assets/images/'
+);
+```
+based on your application settings.
