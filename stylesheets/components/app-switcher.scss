@@ -1,5 +1,6 @@
 $app-switcher: () !default;
 $app-switcher-default-settings: (
+  assets-path: 'assets/images/',
   icon-width: 48px,
 
   apps: (
@@ -21,25 +22,43 @@ $app-switcher: map-merge-settings($app-switcher-default-settings, $app-switcher)
 }
 
 @mixin app-switcher-icon(
+  $app,
   $background-color: primary,
   $width: app-switcher-settings(icon-width)
 ) {
   $background-color: color($background-color);
   $dark-background-color: saturate($background-color, 10%);
+  $logos-path: '#{app-switcher-settings(assets-path)}logos';
 
   background: linear-gradient(to right, $dark-background-color, $background-color);
   border-radius: $global-radius;
   display: block;
   height: $width;
   margin: $column-gutter auto $column-gutter / 2;
+  position: relative;
   width: $width;
+
+  &:after {
+    background: url('#{$logos-path}/#{$app}@2x.png') 50% 50% no-repeat;
+    background-size: $width $width;
+    content: ' ';
+    height: $width;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: $width;
+  }
+
+  &:hover {
+    background: linear-gradient(to right, $background-color, $dark-background-color);
+  }
 }
 
 @mixin app-switcher-icons {
   @each $app, $background-color in app-switcher-settings(apps) {
     &.#{$app} {
       > a > i {
-        @include app-switcher-icon($background-color);
+        @include app-switcher-icon($app, $background-color);
       }
     }
   }
@@ -65,14 +84,20 @@ $app-switcher: map-merge-settings($app-switcher-default-settings, $app-switcher)
     > ul {
       @extend %grid-row;
 
+      white-space: nowrap;
+
       > li {
-        @extend %grid-column-4;
         @include app-switcher-icons;
 
         text-align: center;
+        display: inline-block;
+
+        &:not(:last-child) {
+          padding-right: $column-gutter;
+        }
 
         > span,
-        > a {
+        a > span {
           @extend %app-switcher-label;            
         }
       }
