@@ -111,6 +111,8 @@ $app-switcher: map-merge-settings($app-switcher-default-settings, $app-switcher)
     @include modal($use-content-size: true);
 
     > div {
+      overflow: hidden !important;
+
       > header {
         text-align: center;
       }
