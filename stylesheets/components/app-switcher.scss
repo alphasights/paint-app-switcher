@@ -1,6 +1,7 @@
+@import 'app-switcher-assets';
+
 $app-switcher: () !default;
 $app-switcher-default-settings: (
-  assets-path: 'assets/images/',
   icon-width: 48px,
 
   apps: (
@@ -28,7 +29,6 @@ $app-switcher: map-merge-settings($app-switcher-default-settings, $app-switcher)
 ) {
   $background-color: color($background-color);
   $dark-background-color: saturate($background-color, 10%);
-  $logos-path: '#{app-switcher-settings(assets-path)}logos';
 
   background: linear-gradient(to right, $dark-background-color, $background-color);
   border-radius: $global-radius;
@@ -39,7 +39,10 @@ $app-switcher: map-merge-settings($app-switcher-default-settings, $app-switcher)
   width: $width;
 
   &:after {
-    background: url('#{$logos-path}/#{$app}@2x.png') 50% 50% no-repeat;
+    @extend %app-switcher-#{$app}-icon;
+
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
     background-size: $width $width;
     content: ' ';
     height: $width;
@@ -98,12 +101,12 @@ $app-switcher: map-merge-settings($app-switcher-default-settings, $app-switcher)
 
         > span,
         a > span {
-          @extend %app-switcher-label;            
+          @extend %app-switcher-label;
         }
       }
-    }    
+    }
   }
-  
+
   .app-switcher {
     @include modal($use-content-size: true);
 
