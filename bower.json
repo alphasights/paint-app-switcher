@@ -21,6 +21,6 @@
     "tests"
   ],
   "devDependencies": {
-    "paint": "~0.8.10"
+    "paint": "~0.9.24"
   }
 }
