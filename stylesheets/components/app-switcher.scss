@@ -26,10 +26,9 @@ $app-switcher: map-merge-settings($app-switcher-default-settings, $app-switcher)
 
 @mixin app-switcher-icon(
   $app,
-  $background-color: primary,
+  $background-color: color(primary),
   $width: app-switcher-settings(icon-width)
 ) {
-  $background-color: color($background-color);
   $dark-background-color: saturate($background-color, 10%);
 
   background: linear-gradient(to right, $dark-background-color, $background-color);
