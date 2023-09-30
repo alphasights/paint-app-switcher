@@ -1,0 +1,22 @@
+{
+  "name": "paint-app-switcher",
+  "version": "1.0.0",
+  "description": "Paint AppSwitcher Styles",
+  "private": true,
+  "main": "paint-app-switcher.scss",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alphasights/paint-app-switcher.git"
+  },
+  "keywords": [
+    "Paint",
+    "AppSwitcher"
+  ],
+  "author": "Andrei Popa <andrei.deioo@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alphasights/paint-app-switcher/issues"
+  },
+  "homepage": "https://github.com/alphasights/paint-app-switcher#readme"
+}
